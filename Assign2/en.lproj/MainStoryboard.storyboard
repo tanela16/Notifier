@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="iOS.CocoaTouch" variant="6xAndEarlier" propertyAccessControl="none" useAutolayout="YES" initialViewController="NCp-xi-8zm">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--Alrm View Controller - Alarm Clock-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="AlrmViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Mnj-5B-sVB">
+                                <rect key="frame" x="6" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="abC-jh-5u3"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" id="6yG-QE-322">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="dGl-CM-46z"/>
+                                    <outlet property="delegate" destination="2" id="efO-Ks-b3Q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Mnj-5B-sVB" secondAttribute="bottom" type="default" id="NE9-dn-D7l"/>
+                            <constraint firstItem="Mnj-5B-sVB" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="6" id="Zz5-Ze-0kG"/>
+                            <constraint firstItem="Mnj-5B-sVB" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="qxv-8J-G9e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Alarm Clock" id="fO6-Dv-Ct8">
+                        <barButtonItem key="leftBarButtonItem" title="Delete" id="Dax-UB-JWj">
+                            <connections>
+                                <action selector="btnDel:" destination="2" id="r4o-uQ-Vbz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="pze-82-7jJ">
+                            <connections>
+                                <action selector="btnAdd:" destination="2" id="Bfj-hz-gi5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <connections>
+                        <outlet property="selectDate" destination="Mnj-5B-sVB" id="MOU-24-VqW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="739" y="49"/>
+        </scene>
+        <!--Detail View Controller - Title-->
+        <scene sceneID="H57-iJ-Xdk">
+            <objects>
+                <viewController storyboardIdentifier="detail" id="Rw9-Wt-MKa" customClass="DetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RAg-i1-Yk6">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="SYq-Ga-RNG">
+                                <rect key="frame" x="0.0" y="44" width="480" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="BcH-9Z-qn2"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="388999662.140019">
+                                    <!--2013-04-30 07:27:42 +0000-->
+                                </date>
+                                <timeZone key="timeZone" name="America/Los_Angeles">
+                                    <data key="data">
+VFppZgAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAC5AAAABAAAABCepkign7sVkKCGKqChmveQ
+y4kaoNIj9HDSYSYQ1v50INiArZDa/tGg28CQENzes6DdqayQ3r6VoN+JjpDgnneg4WlwkOJ+WaDjSVKQ
+5F47oOUpNJDmR1gg5xJREOgnOiDo8jMQ6gccIOrSFRDr5v4g7LH3EO3G4CDukdkQ76/8oPBxuxDxj96g
+8n/BkPNvwKD0X6OQ9U+ioPY/hZD3L4Sg+CiiEPkPZqD6CIQQ+viDIPvoZhD82GUg/chIEP64RyD/qCoQ
+AJgpIAGIDBACeAsgA3EokARhJ6AFUQqQBkEJoAcw7JAHjUOgCRDOkAmtvyAK8LCQC+CvoAzZzRANwJGg
+DrmvEA+priAQmZEQEYmQIBJ5cxATaXIgFFlVEBVJVCAWOTcQFyk2IBgiU5AZCRggGgI1kBryNKAb4heQ
+HNIWoB3B+ZAesfigH6HbkCB2KyAhgb2QIlYNICNq2hAkNe8gJUq8ECYV0SAnKp4QJ/7toCkKgBAp3s+g
+KupiECu+saAs036QLZ6ToC6zYJAvfnWgMJNCkDFnkiAycySQM0d0IDRTBpA1J1YgNjLokDcHOCA4HAUQ
+OOcaIDn75xA6xvwgO9vJEDywGKA9u6sQPo/6oD+bjRBAb9ygQYSpkEJPvqBDZIuQRC+goEVEbZBF89Mg
+Ry2KEEfTtSBJDWwQSbOXIErtThBLnLOgTNZqkE18laBOtkyQT1x3oFCWLpBRPFmgUnYQkFMcO6BUVfKQ
+VPwdoFY11JBW5TogWB7xEFjFHCBZ/tMQWqT+IFvetRBchOAgXb6XEF5kwiBfnnkQYE3eoGGHlZBiLcCg
+Y2d3kGQNoqBlR1mQZe2EoGcnO5BnzWagaQcdkGmtSKBq5v+Qa5ZlIGzQHBBtdkcgbq/+EG9WKSBwj+AQ
+cTYLIHJvwhBzFe0gdE+kEHT/CaB2OMCQdt7roHgYopB4vs2gefiEkHqer6B72GaQfH6RoH24SJB+XnOg
+f5gqkAABAAECAwEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEAAQABAAEA
+AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
+</data>
+                                </timeZone>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name of Alarm" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWb-CG-wwd">
+                                <rect key="frame" x="147" y="268" width="185" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="185" id="SXy-dk-aQr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FPN-mf-pMh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Alarm Details" id="HZB-7g-Sxc">
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="GpR-vi-cwq">
+                                            <connections>
+                                                <action selector="btnEditAlarm:" destination="Rw9-Wt-MKa" id="SHa-eT-2gE"/>
+                                                <segue destination="2" kind="push" id="Ycl-Rh-69e"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="RbW-vF-rpU">
+                                            <connections>
+                                                <action selector="btnSave:" destination="Rw9-Wt-MKa" id="tfT-ZS-l5r"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="SYq-Ga-RNG" firstAttribute="leading" secondItem="RAg-i1-Yk6" secondAttribute="leading" type="default" id="APs-ZC-gGb"/>
+                            <constraint firstItem="FPN-mf-pMh" firstAttribute="trailing" secondItem="RAg-i1-Yk6" secondAttribute="trailing" type="default" id="CRF-94-cyo"/>
+                            <constraint firstItem="SYq-Ga-RNG" firstAttribute="top" secondItem="FPN-mf-pMh" secondAttribute="bottom" type="default" id="GqJ-Xm-l0y"/>
+                            <constraint firstItem="CWb-CG-wwd" firstAttribute="centerX" secondItem="SYq-Ga-RNG" secondAttribute="centerX" type="default" id="OUZ-nP-qNE"/>
+                            <constraint firstItem="CWb-CG-wwd" firstAttribute="top" secondItem="SYq-Ga-RNG" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Pu9-np-e07"/>
+                            <constraint firstItem="FPN-mf-pMh" firstAttribute="leading" secondItem="RAg-i1-Yk6" secondAttribute="leading" type="default" id="edW-uj-ePD"/>
+                            <constraint firstItem="FPN-mf-pMh" firstAttribute="top" secondItem="RAg-i1-Yk6" secondAttribute="top" type="default" id="ubJ-Om-XYv"/>
+                            <constraint firstItem="SYq-Ga-RNG" firstAttribute="trailing" secondItem="RAg-i1-Yk6" secondAttribute="trailing" type="default" id="ym9-8b-8zm"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="8Zs-RE-Ilx"/>
+                    <connections>
+                        <outlet property="NameAlrm" destination="CWb-CG-wwd" id="yoS-PO-stW"/>
+                        <outlet property="datepicker" destination="SYq-Ga-RNG" id="sh2-Yv-m6g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaI-OO-0Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1115" y="49"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="SWR-ok-l02">
+            <objects>
+                <navigationController id="NCp-xi-8zm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SL5-b8-ABS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="iLk-ek-4zl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jOv-Bz-bed" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="315" y="49"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="Ycl-Rh-69e"/>
+    </inferredMetricsTieBreakers>
+</document>
